@@ -1,0 +1,18 @@
+.navContainer {
+    display: flex;
+    gap: 10px;
+
+    a {
+        color: #222d34;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: #04B3D4;
+            transform: scale(1.01);
+            -webkit-text-stroke-width: 0.6px;
+            -webkit-text-stroke-color: #0E794D;
+            -webkit-text-fill-color: #04B3D4;
+            text-shadow: 1px 1px 10px #DBF4AD;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #f3f3f3;
+    box-shadow: 0 1px 5px #00000066;
+    padding: 0 400px;
+
+    .navWrapper {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .githubLink {
+        cursor: pointer;
+    }
+}

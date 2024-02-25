@@ -1,95 +1,40 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
+import YouTubeVideo from "@/components/YouTubeVideo/YouTubeVideo";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    return (
+        <>
+            <Image src="/wallpaper-rick-and-morty.jpg" alt="wallpaper" width={1920} height={1080}/>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <h1 className={styles.title}>О чем сериал "Рик и Морти"?</h1>
+            <div className={styles.aboutMult}>
+                <p>
+                    Анимационный научно-фантастический мультсериал <b style={{color: '#37B782FF'}}>Рик и
+                    Морти</b> рассказывает о межпространственных и
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    многомерных приключениях ученого-социопата Рика Санчеса и его внука Мортимера "Морти” Смита. По мере
+                    прохождения своих экспедиций дуэт сталкивается с различными реальностями, обитаемыми местами,
+                    планетами
+                    и своими собственными альтернативными существованиями. Мудьтсериал также исследует отношения между
+                    самовлюбленным Риком и несчастным Морти, поскольку первый часто травмирует Морти своими
+                    сомнительными
+                    методами решения проблем, с которыми они сталкиваются на протяжении всего своего путешествия.
+                </p>
+                <p>
+                    Созданный Джастином Ройландом и Дэном Хармоном, двукратный обладатель премии «Эмми» — одно из самых
+                    популярных анимационных шоу 21 века. С момента премьеры 2 декабря 2013 года шоу стало эталонным
+                    экспериментом в жанре анимационной научной фантастики, и критики высоко оценили его безграничный
+                    размах
+                    и воображение.
+                </p>
+            </div>
+            <div className={styles.ytVideo}>
+                <h2 className={styles.title}>Трейлер к новому 7-му сезону</h2>
+                <YouTubeVideo videoId="MTMbw3zKAfY"/>
+            </div>
+        </>
+    );
 }

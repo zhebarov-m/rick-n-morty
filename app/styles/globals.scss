@@ -1,0 +1,15 @@
+@import "reset";
+
+body {
+    background-image: url("https://rick-i-morty.com/wp-content/themes/dooplay/bgs.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+.container {
+    background-color: #f3f3f3;
+    margin: 0 400px;
+    padding: 0 0 60px;
+}
+
