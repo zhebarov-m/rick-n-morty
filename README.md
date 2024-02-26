@@ -41,6 +41,8 @@
 ![кусок внешнего вида страницы](./public/for%20README.png)
 <hr>
 
+#### Ссылка на макет в Figma: https://www.figma.com/file/6HQZQIkaILdqSFQKaqidJe/Rick-and-Morty-(web-responsive)-(Community)?type=design&node-id=20-110&mode=design&t=lHTg7FMKrbo2FBgd-0
+
 ## Как запустить проект?
 
 Для начала, необходимо запустить сервер разработки, введя в консоль:
