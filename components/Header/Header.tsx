@@ -6,7 +6,8 @@ import Navigation from "@/components/Navigation/Navigation";
 export const navItems = [
     { label: 'Главная', navPath: '/' },
     { label: 'Персонажи', navPath: '/characters' },
-    { label: 'Эпизоды', navPath: '/episodes' }
+    { label: 'Эпизоды', navPath: '/episodes' },
+    { label: 'Квиз', navPath: '/quiz' }
 ];
 
 const Header = () => {

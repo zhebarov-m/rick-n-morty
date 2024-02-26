@@ -1,6 +1,72 @@
 .characterCard {
+    width: 600px;
+    height: 220px;
+    border: 3px solid rgba(219, 244, 173, 0.64);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 
-    .title {
-        font-weight: 700;
+    clip-path: polygon(100% 0, 100% 66%, 87% 100%, 0 100%, 0 0);
+    background: #DBF4AD;
+    background: linear-gradient(90deg, rgba(4, 179, 212, 0.5494572829131652) 0%, rgba(55, 183, 130, 0.4990371148459384) 100%);;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    .image {
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+
+    &:hover .image {
+        border-radius: 50%;
+    }
+
+    .statusIcon {
+        font-size: 14px;
+        color: rgba(255, 0, 0, 0.85);
+        animation: signal 2s infinite;
+
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    }
+
+    @keyframes signal {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .aboutCharacter {
+        padding: 10px;
+
+        .title {
+            position: relative;
+            font-weight: 700;
+            font-size: 27px;
+            color: #f3f3f3;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.16);
+
+            &:hover {
+                color: #ddf8ab;
+            }
+        }
+
+        .status {
+            font-size: 18px;
+            display: flex;
+            gap: 2px;
+            align-items: center;
+        }
     }
 }
