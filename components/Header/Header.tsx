@@ -3,16 +3,14 @@ import styles from './Header.module.scss'
 import Image from "next/image";
 import Navigation from "@/components/Navigation/Navigation";
 
-
+export const navItems = [
+    { label: 'Главная', navPath: '/' },
+    { label: 'Персонажи', navPath: '/characters' },
+    { label: 'Эпизоды', navPath: '/episodes' }
+];
 
 const Header = () => {
     const {logo, github} = imageImporter.getImage()
-
-    const navItems = [
-        { label: 'Главная', navPath: '/' },
-        { label: 'Персонажи', navPath: '/characters' },
-        { label: 'Эпизоды', navPath: '/episodes' }
-    ];
 
     return (
         <header className={styles.container}>

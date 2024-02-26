@@ -2,18 +2,21 @@ import styles from './Footer.module.scss'
 import { RxGithubLogo } from "react-icons/rx";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaTelegram, FaInstagram, FaYoutube } from "react-icons/fa";
+import Navigation from "@/components/Navigation/Navigation";
+import {navItems} from "@/components/Header/Header";
 
 const Footer = () => {
     return (
         <footer className={styles.container}>
-            <h1 className={styles.d}>Rick & Morty💚, by <span>Magomed Zhebarov</span></h1>
+            <Navigation navItems={navItems}/>
             <div className={styles.social}>
                 <a href="#"><RxGithubLogo/></a>
                 <a href="#"><BiLogoGmail/></a>
                 <a href="#"><FaTelegram/></a>
                 <a href="#"><FaYoutube/></a>
-                <a href="#"><FaInstagram/></a>
             </div>
+            <h1 className={styles.d}>Rick & Morty💚</h1>
+            <h2>Created by: <span>Zhebarov Muhammad</span></h2>
         </footer>
     );
 };

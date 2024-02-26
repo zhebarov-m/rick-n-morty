@@ -6,32 +6,45 @@
   gap: 15px;
 
   width: 100%;
-  background: rgb(4,179,212);
-  background: linear-gradient(90deg, rgba(4,179,212,1) 0%, rgba(219,244,173,1) 50%, rgba(55,183,130,1) 100%);
-  color: #333;
+  background: #222;
+  color: #fff;
   padding: 28px 400px;
   h1 {
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
   }
 
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-
-    &:visited {
-      color: #222d34;
+  h2 {
+    span {
+      color: #04B3D4;
+      cursor: pointer;
+      &:hover {
+        color: #DBF4AD;
+      }
     }
   }
 
   .social {
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      color: #f3f3f3;
+
+
+      &:visited {
+        color: #f3f3f3;
+      }
+      a:hover {
+        color: #15ce82;
+      }
+    }
   }
 }
