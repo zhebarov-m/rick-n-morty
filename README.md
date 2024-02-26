@@ -41,7 +41,7 @@
 ![кусок внешнего вида страницы](./public/for%20README.png)
 <hr>
 
-#### Ссылка на макет в Figma: https://www.figma.com/file/6HQZQIkaILdqSFQKaqidJe/Rick-and-Morty-(web-responsive)-(Community)?type=design&node-id=20-110&mode=design&t=lHTg7FMKrbo2FBgd-0
+#### Ссылка на макет в Figma: [Rick & Morty Layout Figma](https://duckduckgo.com)
 
 ## Как запустить проект?
 
