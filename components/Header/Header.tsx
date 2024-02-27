@@ -1,8 +1,11 @@
+'use client';
+
 import imageImporter from "@/app/lib/ImageImporter";
 import styles from './Header.module.scss'
 import Image from "next/image";
 import Navigation from "@/components/Navigation/Navigation";
 import BurgerMenuBtn from "@/components/BurgerMenu/BurgerMenuBtn/BurgerMenuBtn";
+import {useState} from "react";
 
 export const navItems = [
     { label: 'Главная', navPath: '/' },
@@ -13,21 +16,23 @@ export const navItems = [
 
 const Header = () => {
     const {logo, github} = imageImporter.getImage()
+    const [isMobile, setIsMobile] = useState(false)
+    console.log(isMobile)
 
-    const handleVisibleMobileMenu = () => {
-
+    const handleMobileMenu = () => {
+        setIsMobile(prevState => !prevState)
     }
 
     return (
         <header className={styles.container}>
-            <div className={styles.mobileBurg}>
+            <div onClick={handleMobileMenu} className={styles.mobileBurg}>
                 <BurgerMenuBtn />
             </div>
             <div className={styles.navWrapper}>
                 <div className={styles.logo}>
                     <Image src={logo.imgPath} alt={logo.description} width={215} height={68}/>
                 </div>
-                <Navigation navItems={navItems}/>
+                <Navigation isMobile={isMobile} navItems={navItems}/>
             </div>
             <div className={styles.githubLink}>
                 <Image className={styles.img} src="/github-48-icon.png" alt={github.description} width={48} height={48}/>

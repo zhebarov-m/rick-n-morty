@@ -10,7 +10,6 @@ export default function Home() {
     return (
         <>
             <div className={styles.wrapper}>
-                <BurgerMenu />
                 <Image src="/wallpaper-rick-and-morty.jpg" alt="wallpaper" width={1920} height={1080}/>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <h1 className={styles.title}>О чем сериал "Рик и Морти"?</h1>

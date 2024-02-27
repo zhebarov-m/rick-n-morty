@@ -1,9 +1,23 @@
 .navContainer {
     display: flex;
     gap: 10px;
+
     @media (max-width: 1024px) {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--header-height);
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #f8f8f8;
+        transition: left 1s;
     }
+
     a {
         color: #33434d;
         transition: all .2s ease-in-out;
@@ -17,4 +31,8 @@
             text-shadow: 1px 1px 10px #DBF4AD;
         }
     }
+}
+
+.active {
+    left: -100%;
 }
