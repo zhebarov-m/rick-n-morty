@@ -4,11 +4,10 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
-
   width: 100%;
   background: #222;
   color: #fff;
-  padding: 28px 400px;
+  text-align: center;
   h1 {
     display: flex;
     justify-content: center;
@@ -48,4 +47,12 @@
       color: #04B3D4;
     }
   }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
 }

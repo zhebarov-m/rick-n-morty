@@ -2,27 +2,30 @@
   font-size: 27px;
   font-weight: 700;
   color: #04B3D4;
-
   padding: 20px 20px 10px 20px;
+}
+
+.wrapper {
+  background-color: #f3f3f3;
+  margin: 0 15vw;
+  padding: 0 0 60px;
+  max-width: 1280px;
+
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
 }
 
 .aboutMult {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   padding: 0 20px 20px 30px;
-
-  .ytVideo {
-
-
-  }
 
   .title2 {
     font-size: 27px;
     font-weight: 700;
     color: #04B3D4;
-
     padding: 20px 20px 10px 20px;
   }
 }

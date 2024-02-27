@@ -2,22 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 0 20px;
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
     background-color: #fff;
     box-shadow: 0 1px 5px #00000066;
-    padding: 0 300px;
-
+    height: var(--header-height);
     .navWrapper {
         display: flex;
         align-items: center;
         gap: 50px;
+        max-width: 1280px;
     }
 
     .githubLink {
         cursor: pointer;
+    }
+}
+
+.mobileBurg {
+    display: none;
+    @media (max-width: 1024px) {
+        display: block;
     }
 }

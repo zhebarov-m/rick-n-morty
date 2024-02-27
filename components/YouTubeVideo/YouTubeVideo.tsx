@@ -1,6 +1,7 @@
 // components/YouTubeVideo.tsx
 
 import React from 'react';
+import styles from './YouTubeVideo.module.scss'
 
 interface YouTubeVideoProps {
     videoId: string;
@@ -10,10 +11,9 @@ const YouTubeVideo: React.FC<YouTubeVideoProps> = ({ videoId }) => {
     const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
     return (
-        <div style={{margin: '15px auto 30px auto', border: '5px solid #37B782FF', width: 880, padding: 15}}>
+        <div className={styles.videoCont}>
             <iframe
-                width="840"
-                height="490"
+                className={styles.ytVideo}
                 src={embedUrl}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

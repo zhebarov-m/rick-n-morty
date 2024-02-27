@@ -2,6 +2,7 @@ import imageImporter from "@/app/lib/ImageImporter";
 import styles from './Header.module.scss'
 import Image from "next/image";
 import Navigation from "@/components/Navigation/Navigation";
+import BurgerMenuBtn from "@/components/BurgerMenu/BurgerMenuBtn/BurgerMenuBtn";
 
 export const navItems = [
     { label: 'Главная', navPath: '/' },
@@ -13,8 +14,15 @@ export const navItems = [
 const Header = () => {
     const {logo, github} = imageImporter.getImage()
 
+    const handleVisibleMobileMenu = () => {
+
+    }
+
     return (
         <header className={styles.container}>
+            <div className={styles.mobileBurg}>
+                <BurgerMenuBtn />
+            </div>
             <div className={styles.navWrapper}>
                 <div className={styles.logo}>
                     <Image src={logo.imgPath} alt={logo.description} width={215} height={68}/>

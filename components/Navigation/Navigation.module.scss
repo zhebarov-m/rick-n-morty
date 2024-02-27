@@ -1,7 +1,9 @@
 .navContainer {
     display: flex;
     gap: 10px;
-
+    @media (max-width: 1024px) {
+        display: none;
+    }
     a {
         color: #33434d;
         transition: all .2s ease-in-out;

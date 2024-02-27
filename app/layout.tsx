@@ -4,6 +4,7 @@ import "./styles/globals.scss";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import StoreProvider from "@/app/StoreProvider";
+import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
 
 const inter = Inter({subsets: ["latin"]});
 

@@ -1,0 +1,19 @@
+.btnCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    border: 2px solid #DBF4AD;
+    cursor: pointer;
+    background: rgb(23,199,126);
+    background: linear-gradient(235deg, rgba(23,199,126,1) 0%, rgba(4,179,212,1) 100%);
+    button {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #DBF4AD;
+    }
+}
