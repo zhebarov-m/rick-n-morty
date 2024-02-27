@@ -1,18 +1,19 @@
 'use client';
 import React from 'react';
 import {useAppDispatch, useAppSelector} from "@/redux/hooks/hooks";
-import {selectPage, setPage} from "@/redux/slices/characterSlice";
+import {setCurrentPage} from "@/redux/slices/characterSlice";
+import {selectCurrentPage} from "@/redux/slices/characterSlice";
 
 const Pagination = () => {
-    const page = useAppSelector(selectPage)
+    const page = useAppSelector(selectCurrentPage)
     console.log(page)
     const dispatch = useAppDispatch()
 
     const handleNextPage = () => {
-        dispatch(setPage(page + 1))
+        dispatch(setCurrentPage(page + 1))
     }
     const handlePrevPage = () => {
-        dispatch(setPage(page - 1))
+        dispatch(setCurrentPage(page - 1))
     }
 
 
