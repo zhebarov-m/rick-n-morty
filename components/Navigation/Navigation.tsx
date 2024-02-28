@@ -3,7 +3,7 @@ import styles from './Navigation.module.scss'
 
 interface NavigationProps {
     navItems: { label: string; navPath: string }[];
-    isMobile: boolean
+    isMobile?: boolean
 }
 
 const Navigation = (props: NavigationProps) => {
