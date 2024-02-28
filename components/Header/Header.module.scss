@@ -1,24 +1,29 @@
-.container {
+.headerWrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    justify-content: center;
+
     width: 100%;
     background-color: #fff;
     box-shadow: 0 1px 5px #00000066;
-    height: var(--header-height);
-    .navWrapper {
+    .container {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 50px;
-        max-width: 1280px;
-    }
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        width: 1280px;
+        height: var(--header-height);
+        .navWrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1280px;
+        }
 
-    .githubLink {
-        cursor: pointer;
+        .githubLink {
+            cursor: pointer;
+        }
     }
 }
 

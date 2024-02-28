@@ -1,6 +1,3 @@
-// components/YouTubeVideo.tsx
-
-import React from 'react';
 import styles from './YouTubeVideo.module.scss'
 
 interface YouTubeVideoProps {

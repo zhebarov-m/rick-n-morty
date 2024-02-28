@@ -2,14 +2,13 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import YouTubeVideo from "@/components/YouTubeVideo/YouTubeVideo";
-import BurgerMenu from "@/components/BurgerMenu/BurgerMenu";
 
 export default function Home() {
 
 
     return (
-        <>
-            <div className={styles.wrapper}>
+        <div className={styles.mainWrapper}>
+            <div className={styles.container}>
                 <Image src="/wallpaper-rick-and-morty.jpg" alt="wallpaper" width={1920} height={1080}/>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <h1 className={styles.title}>О чем сериал "Рик и Морти"?</h1>
@@ -39,6 +38,6 @@ export default function Home() {
                     <YouTubeVideo videoId="MTMbw3zKAfY"/>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

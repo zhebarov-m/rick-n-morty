@@ -10,7 +10,11 @@
     padding: 15px;
     aspect-ratio: 16/9;
     width: 840px;
-    @media (max-width: 1600px) {
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 
+    @media  (max-width: 425px) {
+        padding: 0;
     }
 }

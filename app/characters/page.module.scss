@@ -1,9 +1,14 @@
+.wrapper {
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f3f3f3;
     padding: 0 30px;
+    width: 1280px;
 
     .title {
         text-align: center;
@@ -11,5 +16,9 @@
         font-size: 30px;
         color: #00B2CB;
         margin: 15px 0;
+    }
+
+    @media (max-width: 1280px) {
+        width: 100vw;
     }
 }

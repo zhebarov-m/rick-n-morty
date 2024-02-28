@@ -12,15 +12,37 @@
         right: 0;
         top: var(--header-height);
         bottom: 0;
-        width: 100%;
+        width: 30vw;
         height: 100vh;
-        background-color: #f8f8f8;
+        background: rgb(4,179,212);
+        background: linear-gradient(180deg, rgba(4, 179, 212, 0.9) 0%, rgba(55, 183, 130, 0.9) 100%);
         transition: left 1s;
+    }
+
+    @media (max-width: 620px) {
+        width: 50vw;
+    }
+
+    @media (max-width: 450px) {
+        width: 100vw;
     }
 
     a {
         color: #33434d;
         transition: all .2s ease-in-out;
+
+        @media (max-width: 1024px) {
+            color: #DBF4AD;
+            font-size: 30px;
+        }
+
+        @media (max-width: 620px) {
+            color: #DBF4AD;
+        }
+
+        @media (max-width: 450px) {
+            color: #DBF4AD;
+        }
 
         &:hover {
             color: #04B3D4;

@@ -5,10 +5,12 @@ import Pagination from "@/components/Pagination/Pagination";
 
 const Characters = () => {
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Персонажи</h1>
-            <Pagination />
-            <CharacterList />
+        <div className={styles.wrapper}>
+            <div className={styles.container}>
+                <h1 className={styles.title}>Персонажи</h1>
+                <Pagination/>
+                <CharacterList/>
+            </div>
         </div>
     );
 };

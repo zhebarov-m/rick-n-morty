@@ -14,6 +14,15 @@
     background: #DBF4AD;
     background: linear-gradient(90deg, rgba(4, 179, 212, 0.5494572829131652) 0%, rgba(55, 183, 130, 0.4990371148459384) 100%);;
 
+
+    @media (max-width: 1280px) {
+        width: 440px;
+    }
+
+    @media (max-width: 960px) {
+        width: 90vw;
+    }
+
     &:hover {
         transform: scale(1.02);
     }

@@ -24,18 +24,21 @@ const Header = () => {
     }
 
     return (
-        <header className={styles.container}>
-            <div onClick={handleMobileMenu} className={styles.mobileBurg}>
-                <BurgerMenuBtn />
-            </div>
-            <div className={styles.navWrapper}>
-                <div className={styles.logo}>
-                    <Image src={logo.imgPath} alt={logo.description} width={215} height={68}/>
+        <header className={styles.headerWrapper}>
+            <div className={styles.container}>
+                <div onClick={handleMobileMenu} className={styles.mobileBurg}>
+                    <BurgerMenuBtn/>
                 </div>
-                <Navigation isMobile={isMobile} navItems={navItems}/>
-            </div>
-            <div className={styles.githubLink}>
-                <Image className={styles.img} src="/github-48-icon.png" alt={github.description} width={48} height={48}/>
+                <div className={styles.navWrapper}>
+                    <div className={styles.logo}>
+                        <Image src={logo.imgPath} alt={logo.description} width={215} height={68}/>
+                    </div>
+                    <Navigation isMobile={isMobile} navItems={navItems}/>
+                </div>
+                <div className={styles.githubLink}>
+                    <Image className={styles.img} src="/github-48-icon.png" alt={github.description} width={48}
+                           height={48}/>
+                </div>
             </div>
         </header>
     );
