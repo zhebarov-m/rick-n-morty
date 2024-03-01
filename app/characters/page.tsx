@@ -8,8 +8,8 @@ const Characters = () => {
         <div className={styles.wrapper}>
             <div className={styles.container}>
                 <h1 className={styles.title}>Персонажи</h1>
-                <Pagination/>
                 <CharacterList/>
+                <Pagination/>
             </div>
         </div>
     );

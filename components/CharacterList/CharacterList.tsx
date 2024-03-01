@@ -2,7 +2,7 @@
 import axios from "axios";
 import Character from "@/components/Character/Character";
 import styles from './CharacterList.module.scss'
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/redux/hooks/hooks";
 import {
     selectCharacters,
@@ -11,6 +11,7 @@ import {
     setCharacters,
     setInfo, setPages
 } from "@/redux/slices/characterSlice";
+import Loader from "@/components/Loader/Loader";
 
 const API_URL: string = 'https://rickandmortyapi.com/api/character'
 
@@ -19,6 +20,7 @@ const CharacterList = () => {
     const characters = useAppSelector(selectCharacters)
     const currentPage = useAppSelector(selectCurrentPage)
     const info = useAppSelector(selectInfo)
+    const [isLoading, setIsLoading] = useState(true)
     console.log(info)
     const dispatch = useAppDispatch()
 
@@ -27,10 +29,12 @@ const CharacterList = () => {
             try {
                 const {data} = await axios.get(`${API_URL}?page=${currentPage}`);
                 dispatch(setInfo(data.info));
-                dispatch(setPages(data.info.pages))
-                dispatch(setCharacters(data.results))
+                dispatch(setPages(data.info.pages));
+                dispatch(setCharacters(data.results));
             } catch (error) {
                 console.error('Error fetching characters:', error);
+            } finally {
+                setIsLoading(false); // Переместили вызов setIsLoading(false) в блок finally
             }
         };
 
@@ -38,10 +42,14 @@ const CharacterList = () => {
     }, [currentPage, dispatch]);
 
     return (
-        <div className={styles.list}>
-            {characters.map(character => (
-                <Character key={character.id} character={character} />
-            ))}
+        <div className={isLoading ? styles.loader : styles.list}>
+            {isLoading ? (
+                <Loader />
+            ) : (
+                characters.map(character => (
+                    <Character key={character.id} character={character}/>
+                ))
+            )}
         </div>
     );
 };
