@@ -1,0 +1,37 @@
+.paginateContainer {
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 36px;
+        height: 36px;
+        border: 2px solid #04B3D4;
+        cursor: pointer;
+
+        &:hover {
+            background: rgb(23,199,126);
+            background: linear-gradient(235deg, rgba(23,199,126,1) 0%, rgba(4,179,212,1) 100%);
+            color: #DBF4AD;
+            border: 2px solid #DBF4AD;
+        }
+
+        &:disabled {
+            color: #444;
+            border: 2px solid transparent;
+            background: none;
+            cursor: no-drop;
+        }
+    }
+
+    .currentPage {
+        background: rgb(23,199,126);
+        background: linear-gradient(235deg, rgba(23,199,126,1) 0%, rgba(4,179,212,1) 100%);
+        color: #DBF4AD;
+        border: 2px solid #DBF4AD;
+    }
+}
