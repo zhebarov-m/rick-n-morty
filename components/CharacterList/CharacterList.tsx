@@ -34,7 +34,7 @@ const CharacterList = () => {
             } catch (error) {
                 console.error('Error fetching characters:', error);
             } finally {
-                setIsLoading(false); // Переместили вызов setIsLoading(false) в блок finally
+                setIsLoading(false);
             }
         };
 

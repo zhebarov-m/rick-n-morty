@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgb(23, 199, 126);
+    background: linear-gradient(235deg, rgba(23, 199, 126, 1) 0%, rgba(4, 179, 212, 1) 100%);
+    max-width: 1280px;
+    overflow: hidden;
+
+    @media (max-width: 1280px) {
+
+    }
+
+    .title {
+        font-size: 50px;
+        color: #DBF4AD;
+        font-weight: 700;
+        text-align: center;
+        transform: translateX(-300px);
+        animation: stringRun 10s infinite linear;
+    }
+
+    @keyframes stringRun {
+        0% {
+            transform: translateX(-550px);
+        }
+        50% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(550px);
+        }
+    }
+
+    .profileCharacter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+        img {
+            padding: 10px;
+            border: 2px solid #DBF4AD;
+            border-radius: 5px;
+            animation: moving 5s infinite;
+        }
+
+        @keyframes moving {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .info {
+
+            .infoBlocks {
+                display: flex;
+                padding: 10px;
+                gap: 6px;
+
+                h1, p {
+                    display: flex;
+                    flex-direction: column;
+
+                    text-align: center;
+                    width: 12vw;
+                    font-weight: 700;
+                    padding: 20px;
+                    font-size: 20px;
+                    border: 2px solid #DBF4AD;
+                    border-radius: 5px;
+                    background-color: rgba(35, 189, 125, 0.89);
+                    color: #DBF4AD;
+
+                    span {
+                        font-weight: 400;
+                        color: #f3f3f3;
+                    }
+                }
+            }
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        font-size: 24px;
+
+        p {
+            display: flex;
+            flex-direction: column;
+
+            border: 2px solid #DBF4AD;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: monospace;
+            color: #f3f3f3;
+            cursor: pointer;
+            transition: background-color .2s ease-in-out;
+            &:hover {
+                background-color: rgba(219, 244, 173, 0.36);
+            }
+
+            span {
+                font-weight: 600;
+                color: #DBF4AD;
+            }
+        }
+    }
+}

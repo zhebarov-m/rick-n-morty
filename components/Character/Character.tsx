@@ -1,10 +1,8 @@
-// Character.jsx
 import React from "react";
 import {tCharacter} from "@/app/types/character";
 import Image from "next/image";
 import styles from './CharacterCard.module.scss'
-import {GiCrossMark} from "react-icons/gi";
-import {FaQuestion} from "react-icons/fa";
+import Link from "next/link";
 
 enum Status {
     DEAD = 'Dead',
@@ -18,9 +16,10 @@ interface CharacterProps {
 
 const Character = (props: CharacterProps) => {
     const {character} = props
-
     const dead = character.status === Status.DEAD
     const unknown = character.status === Status.UNKNOWN
+
+
     return (
         <div className={styles.characterCard}>
             <Image
@@ -30,9 +29,11 @@ const Character = (props: CharacterProps) => {
                 width={184}
                 height={184}/>
             <div className={styles.aboutCharacter}>
-                <h1 className={styles.title}>
-                    {character.name}
-                </h1>
+                <Link href={`/characters/${character.id}`}>
+                    <h1 className={styles.title}>
+                        {character.name}
+                    </h1>
+                </Link>
                 <p className={styles.status}>
                     Status: <b>{character.status}</b>
                     <span className={styles.statusIcon}>
