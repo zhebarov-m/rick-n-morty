@@ -1,4 +1,3 @@
-'use client';
 import CharacterList from "@/components/CharacterList/CharacterList";
 import styles from './page.module.scss'
 import Pagination from "@/components/Pagination/Pagination";

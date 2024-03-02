@@ -1,10 +1,7 @@
-'use client';
-import {useEffect} from "react";
-import axios from "axios";
-import {useAppDispatch, useAppSelector} from "@/redux/hooks/hooks";
-import {selectCharacter, setCharacter} from "@/redux/slices/characterSlice";
+
 import Image from "next/image";
 import styles from './page.module.scss'
+import {tCharacter} from "@/app/types/character";
 
 
 const API_URL: string = 'https://rickandmortyapi.com/api/character'
@@ -15,22 +12,17 @@ type characterProps = {
     }
 }
 
-const Character = (props: characterProps) => {
-    const {params: {id}} = props
-    const dispatch = useAppDispatch()
-    const character = useAppSelector(selectCharacter)
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const {data} = await axios.get(`${API_URL}/${id}`);
-                dispatch(setCharacter(data));
-            } catch (error) {
-                console.error('Error fetching characters:', error);
-            }
-        };
+async function fetchData(id: number) {
+    const response = await fetch(`${API_URL}/${id}`);
+    const data: tCharacter = await response.json()
 
-        fetchData();
-    }, [id, dispatch]);
+    return data
+}
+
+async function Character(props: characterProps) {
+    const {params: {id}} = props
+    const character = await fetchData(id)
+
 
     return (
         <div className={styles.container}>
@@ -58,6 +50,6 @@ const Character = (props: characterProps) => {
             </div>
         </div>
     );
-};
+}
 
 export default Character;

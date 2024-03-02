@@ -1,4 +1,3 @@
-import React from "react";
 import {tCharacter} from "@/app/types/character";
 import Image from "next/image";
 import styles from './CharacterCard.module.scss'
@@ -14,28 +13,28 @@ interface CharacterProps {
     character: tCharacter
 }
 
-const Character = (props: CharacterProps) => {
+async function Character(props: CharacterProps) {
     const {character} = props
-    const dead = character.status === Status.DEAD
-    const unknown = character.status === Status.UNKNOWN
-
+    console.log(character, 'hellooooo')
+    const dead = character?.status === Status?.DEAD
+    const unknown = character?.status === Status?.UNKNOWN
 
     return (
         <div className={styles.characterCard}>
             <Image
                 className={styles.image}
-                src={character.image}
-                alt={character.name}
+                src={character?.image}
+                alt={character?.name}
                 width={184}
                 height={184}/>
             <div className={styles.aboutCharacter}>
-                <Link href={`/characters/${character.id}`}>
+                <Link href={`/characters/${character?.id}`}>
                     <h1 className={styles.title}>
-                        {character.name}
+                        {character?.name}
                     </h1>
                 </Link>
                 <p className={styles.status}>
-                    Status: <b>{character.status}</b>
+                    Status: <b>{character?.status}</b>
                     <span className={styles.statusIcon}>
                         {
                             dead
@@ -46,11 +45,11 @@ const Character = (props: CharacterProps) => {
                         }
                     </span>
                 </p>
-                <p className={styles.species}>Species: {character.species}</p>
+                <p className={styles.species}>Species: {character?.species}</p>
                 {/* Добавьте другие свойства персонажа по желанию */}
             </div>
         </div>
     );
-};
+}
 
 export default Character;
