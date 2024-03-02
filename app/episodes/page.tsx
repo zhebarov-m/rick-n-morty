@@ -1,8 +1,9 @@
+import EpisodeList from "@/components/EpisodeList/EpisodeList";
 
 const Page = () => {
     return (
         <div>
-            <h1>EPISODES</h1>
+            <EpisodeList />
         </div>
     );
 };

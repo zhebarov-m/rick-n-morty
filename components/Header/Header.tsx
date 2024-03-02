@@ -6,8 +6,14 @@ import Image from "next/image";
 import Navigation from "@/components/Navigation/Navigation";
 import BurgerMenuBtn from "@/components/BurgerMenu/BurgerMenuBtn/BurgerMenuBtn";
 import {useState} from "react";
+import Link from "next/link";
 
-export const navItems = [
+type navItemsType = {
+    label: string,
+    navPath: string
+}
+
+export const navItems: navItemsType[] = [
     { label: 'Главная', navPath: '/' },
     { label: 'Персонажи', navPath: '/characters' },
     { label: 'Эпизоды', navPath: '/episodes' },
@@ -30,9 +36,9 @@ const Header = () => {
                     <BurgerMenuBtn/>
                 </div>
                 <div className={styles.navWrapper}>
-                    <div className={styles.logo}>
+                    <Link href={navItems[0].navPath} className={styles.logo}>
                         <Image src={logo.imgPath} alt={logo.description} width={215} height={68}/>
-                    </div>
+                    </Link>
                     <Navigation isMobile={isMobile} navItems={navItems}/>
                 </div>
                 <div className={styles.githubLink}>
