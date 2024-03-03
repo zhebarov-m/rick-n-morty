@@ -2,7 +2,7 @@ import {tEpisode} from "@/app/types/episodes";
 import styles from './EpisodeCard.module.scss'
 import {tCharacter} from "@/app/types/character";
 
-interface EposideCardProps {
+interface EpisodeCardProps {
     episode: tEpisode
 }
 
@@ -12,7 +12,7 @@ async function fetchCharacter(API_URL: string) {
     return data
 }
 
-async function EpisodeCard(props: EposideCardProps) {
+async function EpisodeCard(props: EpisodeCardProps) {
     const {episode} = props
     const character = await fetchCharacter(episode.characters[0])
 

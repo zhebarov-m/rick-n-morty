@@ -15,7 +15,6 @@ interface CharacterProps {
 
 async function Character(props: CharacterProps) {
     const {character} = props
-    console.log(character, 'hellooooo')
     const dead = character?.status === Status?.DEAD
     const unknown = character?.status === Status?.UNKNOWN
 
@@ -46,7 +45,6 @@ async function Character(props: CharacterProps) {
                     </span>
                 </p>
                 <p className={styles.species}>Species: {character?.species}</p>
-                {/* Добавьте другие свойства персонажа по желанию */}
             </div>
         </div>
     );

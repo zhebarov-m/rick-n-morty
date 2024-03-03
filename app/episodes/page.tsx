@@ -1,8 +1,8 @@
 import EpisodeList from "@/components/EpisodeList/EpisodeList";
-
+import styles from './episodes.module.scss'
 const Page = () => {
     return (
-        <div>
+        <div className={styles.container}>
             <EpisodeList />
         </div>
     );
