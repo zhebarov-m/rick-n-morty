@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+
+.container {
+    width: 700px;
+    border-radius: 30px;
+    padding: 60px;
+    background-color: #fff;
+    position: relative;
+    font-size: 20px;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h2 {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        img {
+            animation: imgIncrease 3s infinite linear;
+        }
+
+        @keyframes imgIncrease {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.04);
+            }
+            100% {
+                transform: scale(1);
+
+            }
+        }
+
+        .cardButtons {
+            button {
+                padding: 10px;
+                width: 80px;
+                border-radius: 8px;
+                color: white;
+                transition: transform .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &:active {
+                    position: relative;
+                    top: 3px;
+                }
+
+                &.aliveBtn {
+                    background-color: green;
+                    margin-right: 20px;
+                }
+
+                &.deadBtn {
+                    background-color: red;
+                }
+            }
+        }
+    }
+
+    .progress {
+        height: 10px;
+        border-radius: 30px;
+        background-color: rgb(232, 232, 232);
+        margin-bottom: 25px;
+
+        .progressInner {
+            height: 100%;
+            border-radius: 30px;
+            width: 80%;
+            background: rgb(18, 231, 48);
+            transition: all 0.3s ease-in-out;
+            background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+        }
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        height: 50px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:before {
+        width: 95%;
+        bottom: -10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 0;
+    }
+
+    &:after {
+        width: 90%;
+        bottom: -20px;
+        background-color: rgba(255, 255, 255, 0.3);
+        z-index: 1;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 15px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                border: 2px solid rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}

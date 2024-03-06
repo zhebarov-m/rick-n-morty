@@ -1,8 +1,10 @@
+import styles from './quiz.module.scss'
+import Quiz from "@/components/QuizGame/Game/Quiz";
 
 const Page = () => {
     return (
-        <div>
-            <h1>QUIZ</h1>
+        <div className={styles.quizContainer}>
+            <Quiz />
         </div>
     );
 };
